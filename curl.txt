@@ -1,0 +1,3 @@
+curl localhost:3000/api/auth -X POST -d '{"email":"larry@gmail.com", "password": "LARRY"}' -C "Content-Type: application/json"
+
+curl localhost:3000/api/auth -H 'authorization:TOKEN'

@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: verdana;
+  margin: 0 0;
+}
+
+header {
+  display: flex;
+  background-color: dodgerBlue;
+  padding-left: 1rem;
+}
+
+header > a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+header nav {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header a.selected {
+  font-weight: bold;
+}
+
+#content {
+  margin: 1.5rem;
+}
+
+.tiles{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.tiles > div{
+  margin: 1rem;
+  width: calc(33% - 2rem);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px black;
+  border-radius: 0.5rem;
+}
+
+.unenrolled {
+  background-color: #EFEFEF;
+}
+
+.school-logo{
+  height: 5rem;
+  width: 100%;
+  background-position: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > div {
+  margin: 0.25rem 0;
+}
+
+select, button {
+  margin-bottom: 0.25rem;
+  font-size: 1.0rem;
+}
+
+label {
+  padding-right: 0.25rem;
+}
+
+.errors {
+  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button.destroy {
+  background-color: red;
+  color: white;
+}
+
+form {
+  margin: 1rem;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+}
+form > * {
+  margin: 1rem;
+}
+
+@media (max-width:600px){
+  .tiles > div {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    flex-direction: column;
+  }
+  header nav {
+    flex-direction: column;
+  }
+}
+

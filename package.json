@@ -1,0 +1,49 @@
+{
+  "name": "acme_schools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run webpack",
+    "webpack": "webpack",
+    "test:dev": "DATABASE_URL=postgres://localhost/acme_schools_db_test mocha tests/server/*spec.js --watch",
+    "start:dev": "JWT=whatever nodemon server.js --ignore dist --ignore src & npm run webpack -- --watch --mode=development"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "pg": "^7.11.0",
+    "sequelize": "^5.9.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.19.0",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "supertest": "^4.0.2",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  }
+}
